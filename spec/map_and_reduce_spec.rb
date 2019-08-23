@@ -44,7 +44,7 @@ describe 'my own reduce-like methods' do
   end
 
   describe "reduce_to_all_true returns true when all values are truthy" do
-    xit "reduces correctly" do
+    it "reduces correctly" do
       source_array = [1, 2, true, "razmatazz"]
       expect(reduce_to_all_true(source_array)).to be_truthy
     end

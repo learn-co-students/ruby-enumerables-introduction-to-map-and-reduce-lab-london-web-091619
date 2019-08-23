@@ -43,9 +43,19 @@ def reduce_to_total(array, starting_point = 0 )
 end
 
 def reduce_to_all_true(array)
-  array.all?(true)
+  counter = 0
+  while counter < array.length do
+    return false if array[counter] == false
+    counter += 1
+  end
+  return true
 end  
 
 def reduce_to_any_true(array)
-  array.any?(true)
+  counter = 0
+  while counter < array.length do
+    return true if array[counter]
+    counter += 1
+  end
+  return false
 end
